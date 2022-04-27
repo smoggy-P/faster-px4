@@ -1,0 +1,22 @@
+- git:
+    local-name: acl-gazebo
+    uri: https://gitlab.com/mit-acl/lab/acl-gazebo
+    version: ce65ebe64b627a46204c090448971092be3a7154
+- git:
+    local-name: catkin_simple
+    uri: https://github.com/catkin/catkin_simple.git
+    version: 0e62848b12da76c8cc58a1add42b4f894d1ac21e
+- git:
+    local-name: snapstack_msgs
+    uri: https://gitlab.com/mit-acl/fsw/snap-stack/snapstack_msgs.git
+    version: 3e1dee9616bd7e8a467bce5a66c947ebf13a79d8
+- git:
+    local-name: behavior_selector
+    uri: https://gitlab.com/mit-acl/fsw/behavior_selector
+    version: 304975f49a726bdbee1f5bdfed5d1943e9eb349e
+- git:
+    local-name: acl-mapping
+    uri: https://gitlab.com/mit-acl/lab/acl-mapping
+    version: 821655dc687cfeec6d4818b73d7633fc5b665987
+
+    
