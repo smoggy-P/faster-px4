@@ -18,3 +18,11 @@
     local-name: acl-mapping
     uri: https://github.com/smoggy-P/acl-mapping-px4
     version: a44f405db76ffc091a0abcfbadf2de0375816b4e
+- git:
+    local-name: noise_maker
+    uri: https://github.com/cor-drone-planning/noise_maker
+    version: e6f2787205c7758f82064f9ac2a21701285ac1fd
+- git:
+    local-name: pva_tracker
+    uri: https://github.com/g-ch/pva_tracker
+    version: 96331a72c805c9138827777338125b25c234d5e4
