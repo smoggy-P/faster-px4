@@ -10,6 +10,8 @@
 #include <sensor_msgs/point_cloud_conversion.h>
 #include <nav_msgs/Odometry.h>
 #include <trajectory_msgs/JointTrajectoryPoint.h>
+#include <string>
+#include <std_msgs/Bool.h>
 
 // This object is created in the faster_ros_node
 FasterRos::FasterRos(ros::NodeHandle nh) : nh_(nh)
@@ -146,6 +148,7 @@ FasterRos::FasterRos(ros::NodeHandle nh) : nh_(nh)
   pub_traj_committed_colored_ = nh_.advertise<visualization_msgs::MarkerArray>("traj_committed_colored", 1);
   pub_traj_whole_colored_ = nh_.advertise<visualization_msgs::MarkerArray>("traj_whole_colored", 1);
   pub_traj_safe_colored_ = nh_.advertise<visualization_msgs::MarkerArray>("traj_safe_colored", 1);
+  pub_planner_empty_ = nh_.advertise<std_msgs::Bool>("/planner_empty", 1);
 
   // Subscribers
   occup_grid_sub_.subscribe(nh_, "occup_grid", 1);
@@ -292,6 +295,11 @@ void FasterRos::pubCB(const ros::TimerEvent& e)
     setpoint_.pose.position.z = quadGoal.positions[2];
 
     pub_setpoint_.publish(setpoint_);
+
+    std_msgs::Bool msg;
+    msg.data = faster_ptr_->plan_empty;
+    pub_planner_empty_.publish(msg);
+
   }
 }
 

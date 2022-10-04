@@ -453,8 +453,8 @@ void Faster::replan(vec_Vecf<3>& JPS_safe_out, vec_Vecf<3>& JPS_whole_out, vec_E
   // state M;
   M_.pos = getFirstCollisionJPS(JPSk_inside_sphere_tmp, &thereIsIntersection2, UNKNOWN_MAP,
                                 RETURN_INTERSECTION);  // results saved in JPSk_inside_sphere_tmp
+  bool needToComputeSafePath = false;
 
-  bool needToComputeSafePath;
   int indexH = findIndexH(needToComputeSafePath);
 
   std::cout << "NeedToComputeSafePath=" << needToComputeSafePath << std::endl;
@@ -714,6 +714,10 @@ bool Faster::getNextGoal(state& next_goal)
   if (plan_.size() > 1)
   {
     plan_.pop_front();
+    plan_empty = false;
+  }
+  else{
+    plan_empty = true;
   }
   getDesiredYaw(next_goal);
   previous_yaw_ = next_goal.yaw;

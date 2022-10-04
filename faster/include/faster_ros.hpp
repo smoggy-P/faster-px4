@@ -141,6 +141,7 @@ private:
   ros::Publisher pub_traj_committed_colored_;
   ros::Publisher pub_traj_whole_colored_;
   ros::Publisher pub_traj_safe_colored_;
+  ros::Publisher pub_planner_empty_;
 
   ros::Publisher pub_planning_vis_;
   ros::Publisher pub_intersec_points_;

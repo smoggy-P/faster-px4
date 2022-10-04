@@ -1,8 +1,8 @@
 <launch>
 
 	<include file="$(find global_mapper_ros)/launch/global_mapper_node_copy.launch" />
-    	<include file="$(find faster)/launch/faster_interface.launch" />
-    	<include file="$(find faster)/launch/faster_copy.launch" />
+	<include file="$(find faster)/launch/faster_interface.launch" />
+	<include file="$(find faster)/launch/faster_copy.launch" />
 	<node name="goal_publisher" pkg="set_destination" type="goal_publisher" output="screen" />
 	<node name="collision_detector" pkg="set_destination" type="collision_detector" output="screen">
 		<param name="long_axis" value="0.8" />

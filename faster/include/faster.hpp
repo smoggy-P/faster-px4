@@ -64,8 +64,10 @@ public:
   void getG(state& G);
   void setTerminalGoal(state& term_goal);
   void resetInitialization();
+  bool plan_empty;
 
 private:
+  
   state M_;
   std::deque<state> plan_;
 
