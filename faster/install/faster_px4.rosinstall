@@ -26,3 +26,7 @@
     local-name: pva_tracker
     uri: https://github.com/g-ch/pva_tracker
     version: 96331a72c805c9138827777338125b25c234d5e4
+- git:
+    local-name: set_destination
+    uri: https://github.com/smoggy-P/Collision-detector-gazebo
+    version: a7a9edbfc7350806a6282ae695108aa7c9967878
